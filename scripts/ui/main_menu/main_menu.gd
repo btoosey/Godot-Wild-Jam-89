@@ -1,7 +1,7 @@
 extends Control
 
 
-var main_scene: PackedScene = preload("uid://gq26gdg6jtcb")
+var main_scene: PackedScene = preload("uid://gamq8ijstha3")
 
 @onready var play_button: Button = $HBoxContainer/PlayButton
 
