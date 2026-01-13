@@ -29,3 +29,8 @@ shape = SubResource("RectangleShape2D_x7p2l")
 script = ExtResource("1_8afob")
 player = NodePath("..")
 speed = 0.8
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(2, 2)
+position_smoothing_enabled = true
+position_smoothing_speed = 4.0
