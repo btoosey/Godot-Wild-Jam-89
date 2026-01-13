@@ -1,4 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://r868p8jpmwxb"]
+[gd_scene load_steps=6 format=3 uid="uid://r868p8jpmwxb"]
+
+[ext_resource type="Script" uid="uid://tvrb3eegop2l" path="res://scripts/player/movement/grid_mover.gd" id="1_8afob"]
+[ext_resource type="Script" uid="uid://jdmkcjknuh4l" path="res://scripts/player/player.gd" id="1_dovo2"]
 
 [sub_resource type="Gradient" id="Gradient_x7p2l"]
 
@@ -12,6 +15,7 @@ fill_from = Vector2(0, 0.00458716)
 size = Vector2(6, 6)
 
 [node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_dovo2")
 
 [node name="Visuals" type="CanvasGroup" parent="."]
 
@@ -20,3 +24,8 @@ texture = SubResource("GradientTexture2D_8afob")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_x7p2l")
+
+[node name="GridMover" type="Node" parent="." node_paths=PackedStringArray("player")]
+script = ExtResource("1_8afob")
+player = NodePath("..")
+speed = 0.8
